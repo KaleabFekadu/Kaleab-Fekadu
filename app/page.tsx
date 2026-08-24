@@ -87,10 +87,36 @@ export default function Page() {
         <a href="#home" className="brand" onClick={() => setMenuOpen(false)}><span className="brand-mark">K</span><span>KFC<span className="teal">.</span></span></a>
         <button className="menu-button" aria-expanded={menuOpen} aria-label="Toggle menu" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close' : 'Menu'}</button>
         <div className={`nav-links ${menuOpen ? 'nav-open' : ''}`}>
-          {navItems.map((item) => <a key={item} href={`#${item}`} className={active === item ? 'active' : ''} onClick={() => setMenuOpen(false)}>// {item}</a>)}
-          <a className="resume-button" href="#contact" onClick={() => setMenuOpen(false)}>Resume <Arrow /></a>
-          <button className="theme-toggle" type="button" onClick={() => setLightMode(!lightMode)} aria-label={`Switch to ${lightMode ? 'dark' : 'light'} mode`}>{lightMode ? '☾' : '☼'}</button>
-        </div>
+  {navItems.map((item) => (
+    <a
+      key={item}
+      href={`#${item}`}
+      className={active === item ? 'active' : ''}
+      onClick={() => setMenuOpen(false)}
+    >
+      // {item}
+    </a>
+  ))}
+
+  <a
+    className="resume-button"
+    href="https://drive.google.com/file/d/14vwKT1vPMBFWruDBt97ucA8rK68FZgbd/view"
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={() => setMenuOpen(false)}
+  >
+    Resume <Arrow />
+  </a>
+
+  <button
+    className="theme-toggle"
+    type="button"
+    onClick={() => setLightMode(!lightMode)}
+    aria-label={`Switch to ${lightMode ? 'dark' : 'light'} mode`}
+  >
+    {lightMode ? '☾' : '☼'}
+  </button>
+</div>
         <div className="availability"><span className="pulse-dot" /> Open to freelance work</div>
       </nav>
 
