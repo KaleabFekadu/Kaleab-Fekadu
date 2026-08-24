@@ -87,36 +87,36 @@ export default function Page() {
         <a href="#home" className="brand" onClick={() => setMenuOpen(false)}><span className="brand-mark">K</span><span>KFC<span className="teal">.</span></span></a>
         <button className="menu-button" aria-expanded={menuOpen} aria-label="Toggle menu" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? 'Close' : 'Menu'}</button>
         <div className={`nav-links ${menuOpen ? 'nav-open' : ''}`}>
-  {navItems.map((item) => (
-    <a
-      key={item}
-      href={`#${item}`}
-      className={active === item ? 'active' : ''}
-      onClick={() => setMenuOpen(false)}
-    >
+          {navItems.map((item) => (
+            <a
+              key={item}
+              href={`#${item}`}
+              className={active === item ? 'active' : ''}
+              onClick={() => setMenuOpen(false)}
+            >
       // {item}
-    </a>
-  ))}
+            </a>
+          ))}
 
-  <a
-    className="resume-button"
-    href="https://drive.google.com/file/d/14vwKT1vPMBFWruDBt97ucA8rK68FZgbd/view"
-    target="_blank"
-    rel="noopener noreferrer"
-    onClick={() => setMenuOpen(false)}
-  >
-    Resume <Arrow />
-  </a>
+          <a
+            className="resume-button"
+            href="https://drive.google.com/file/d/14vwKT1vPMBFWruDBt97ucA8rK68FZgbd/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+          >
+            Resume <Arrow />
+          </a>
 
-  <button
-    className="theme-toggle"
-    type="button"
-    onClick={() => setLightMode(!lightMode)}
-    aria-label={`Switch to ${lightMode ? 'dark' : 'light'} mode`}
-  >
-    {lightMode ? '☾' : '☼'}
-  </button>
-</div>
+          <button
+            className="theme-toggle"
+            type="button"
+            onClick={() => setLightMode(!lightMode)}
+            aria-label={`Switch to ${lightMode ? 'dark' : 'light'} mode`}
+          >
+            {lightMode ? '☾' : '☼'}
+          </button>
+        </div>
         <div className="availability"><span className="pulse-dot" /> Open to freelance work</div>
       </nav>
 
@@ -134,7 +134,7 @@ export default function Page() {
           <div className="terminal-body"><span className="line-no">01<br />02<br />03<br />04<br />05<br />06<br />07<br />08<br />09<br />10</span><code><span className="pink">const</span> engineer <span className="muted">=</span> {'{'}<br />  name: <span className="gold">&quot;Kaleab&quot;</span>,<br />  role: <span className="gold">&quot;Backend Engineer&quot;</span>,<br />  company: <span className="gold">&quot;Bloomberg&quot;</span>,<br />  focus: [<span className="gold">&quot;scale&quot;</span>, <span className="gold">&quot;impact&quot;</span>],<br />  location: <span className="gold">&quot;Addis Ababa&quot;</span>,<br />  status: <span className="teal">&quot;building&quot;</span>,<br />  ventures: <span className="teal">true</span><br />{'}'}<span className="cursor" /></code></div>
           <div className="terminal-status"><span className="teal">●</span> Available for select collaborations <span>Ln 10, Col 2</span></div>
         </div>
-        <div className="social-rail"><a href="https://www.linkedin.com" aria-label="LinkedIn">in</a><a href="https://github.com" aria-label="GitHub">GH</a><a href="mailto:kaleab@example.com" aria-label="Email">@</a></div>
+        <div className="social-rail"><a href="https://www.linkedin.com/in/kaleab-fekadu/" aria-label="LinkedIn">in</a><a href="https://github.com/KaleabFekadu" aria-label="GitHub">GH</a><a href="mailto:ceo@favatechnologies.com" aria-label="Email">@</a></div>
         <div className="scroll-cue">SCROLL TO EXPLORE <span>↓</span></div>
       </section>
 
